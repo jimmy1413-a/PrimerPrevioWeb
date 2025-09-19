@@ -1,97 +1,156 @@
 /* === 1. Herencia === */
 /* El color del body se hereda en los textos hijos */
 body {
-  color: #444; /* heredado por defecto en p, h1, h2, etc. */
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 20px;
+    color: #444;
+    /* heredado por defecto en p, h1, h2, etc. */
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding-top: var(--banner-h);
+}
+:root {
+  --banner-h: 120px; /* altura del header fijo */
 }
 
 /* === 2. Selector de tipo === */
 p {
-  line-height: 1.5;
-  color: blue; /* Primera declaración: será sobrescrita más abajo */
+    line-height: 1.5;
+    color: blue;
+    /* Primera declaración: será sobrescrita más abajo */
 }
 
 /* === 3. Selector de clase === */
 .destacado {
-  background-color: #f0f8ff;
-  border-left: 4px solid #0077cc;
-  padding: 10px;
+    background-color: #f0f8ff;
+    border-left: 4px solid #0077cc;
+    padding: 10px;
 }
 
 /* === 4. Selector de ID === */
 #principal {
-  text-align: center;
-  color: #0077cc;
-  font-weight: bold;
+    text-align: center;
+    color: #0077cc;
+    font-weight: bold;
 }
 
 /* === 5. Selector descendiente === */
 div p {
-  font-size: 14px;
-  color: #555;
+    font-size: 14px;
+    color: #555;
 }
 
 /* === 6. Selector de grupo === */
-h1, h2 {
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  color: #222;
-  margin-bottom: 10px;
+h1,
+h2 {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #222;
+    margin-bottom: 10px;
 }
 
 /* === 7. Conflicto de cascada === */
 /* El mismo selector p definido de nuevo: gana esta última */
 p {
-  color: green; /* Esta declaración sobrescribe el color azul */
+    color: green;
+    /* Esta declaración sobrescribe el color azul */
 }
 
 /* === 8. Conflicto de especificidad === */
 p {
-  color: red; /* tipo → menor prioridad */
+    color: red;
+    /* tipo → menor prioridad */
 }
+
 .parrafo-especial {
-  color: orange; /* clase → prioridad media */
+    color: orange;
+    /* clase → prioridad media */
 }
+
 #unico {
-  color: purple; /* id → mayor prioridad, gana sobre todos */
+    color: purple;
+    /* id → mayor prioridad, gana sobre todos */
 }
 
 .tarjeta {
-  margin: 20px auto;          
-  padding: 15px;               
-  border: 1px solid #ccc;     
-  border-radius: 8px;          
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-  max-width: 800px;            
-  background-color: white;      
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    background-color: white;
+    position: relative;
 }
 
-.banner {
-  background-color: #0077cc;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  position: fixed;
-  top : 0;
-  left : 0;
-  width: 100%;
-  text-align: center;
-  z-index: 1000;
-
-}
 
 .badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: crimson;
-  color:  white;
-  font-size: 0.8 rem;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 12px;
-  box-shadow: 0 2 4px black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: crimson;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+header.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--banner-h);
+    background: linear-gradient(90deg, #0066aa, #0088cc);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 9999;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* Menú de navegación */
+nav {
+    background-color: #222;
+    position: sticky;
+    /* Menú pegajoso debajo del banner */
+    top: 150px;
+    /* Justo debajo del banner */
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #4CAF50;
+}
+
+nav a.active {
+    background-color: #007BFF;
 }
 
 form {
@@ -101,7 +160,7 @@ form {
     border: 2px solid #ccc;
     border-radius: 12px;
     background-color: #f9f9f9;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
 }
 
@@ -123,7 +182,7 @@ form textarea {
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 form input:focus,
@@ -154,7 +213,7 @@ form button:hover {
 /* Tabla  recursos*/
 table {
     width: 100%;
-    border-collapse: collapse; 
+    border-collapse: collapse;
     margin: 20px 0;
     font-family: Arial, sans-serif;
     font-size: 0.95rem;
@@ -179,56 +238,98 @@ table tr:nth-child(even) {
 }
 
 
-/* configuracion nav */
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #222;
+    /* Fondo oscuro */
+    padding: 10px 0;
+    /* Espaciado vertical */
+}
+
 nav ul {
-  display: flex;           
-  justify-content: center; 
-  list-style: none;        
-  padding: 0;
-  margin: 0;
+    display: flex;
+    /* Flexbox para alinearlos en línea */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    list-style: none;
+    /* Quitar viñetas */
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    /* Espaciado entre links */
 }
 
 nav li {
-  margin: 0 15px;          /* espacio entre enlaces */
+    margin: 0;
 }
 
 nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
+    color: #fff;
+    /* Texto blanco */
+    text-decoration: none;
+    /* Quitar subrayado */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 15px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    transition: background 0.3s, color 0.3s;
 }
 
 nav a:hover {
-  color: #007BFF;          
+    background-color: #4CAF50;
+    /* Fondo verde al pasar */
+    color: #fff;
+}
+
+nav a.active {
+    background-color: #007BFF;
+    /* Resaltado de la página activa */
+    color: #fff;
 }
 
 
 /* Galería en cuadrícula */
 .galeria {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
-  gap: 15px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas en pantallas grandes */
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .galeria img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Media query 1: pantallas medianas (<1024px) → 2 columnas */
 @media (max-width: 1024px) {
-  .galeria {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Media query 2: pantallas pequeñas (<768px) → 1 columna */
 @media (max-width: 768px) {
-  .galeria {
-    grid-template-columns: 1fr;
-  }
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    padding: 14px;
+    text-align: center;
+    background: #023e8a;
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
 }
