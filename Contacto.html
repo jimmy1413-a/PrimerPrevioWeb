@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TechBlog</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="inicio.html" data-page="inicio" class="nav-link">Inicio</a>
+      <a href="Contacto.html" data-page="destinos" class="nav-link">Contacto</a>
+      <a href="Articulos.html" data-page="tips" class="nav-link">Articulos</a>
+      <a href="Acerca.html" data-page="contacto" class="nav-link">Acerca</a>
+      <a href="Recursos.html" data-page="recursos" class="nav-link">Recursos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contáctanos</h2>
+      <form action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" value="Juan Pérez" required>
+        <br><br>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@mail.com" value="usuario@mail.com" required>
+        <br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" placeholder="Tu edad" value="20" required>
+        <br><br>
+
+        <label for="tema">Tema:</label>
+        <select id="tema" name="tema" required>
+          <option value="consulta" selected>Consulta general</option>
+          <option value="sugerencia">Sugerencia</option>
+          <option value="soporte">Soporte técnico</option>
+        </select>
+        <br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" required>Hola, me gustaría más información sobre TechBlog.</textarea>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="anio">2025</span> Explora el Mundo By Jimmy</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TechBlog</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body data-page="inicio">
+  <header>
+    <nav>
+      <a href="inicio.html" data-page="inicio" class="nav-link">Inicio</a>
+      <a href="Contacto.html" data-page="destinos" class="nav-link">Contacto</a>
+      <a href="Articulos.html" data-page="tips" class="nav-link">Articulos</a>
+      <a href="Acerca.html" data-page="contacto" class="nav-link">Acerca</a>
+      <a href="Recursos.html" data-page="recursos" class="nav-link">Recursos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="salida"></h2>
+    </section>
+
+    <section>
+      <button id="btnVisita">Registrar Viaje</button>
+      <p>Total de viajes realizados: <span id="totalVisitas">0</span></p>
+    </section>
+
+    <section>
+      <h3>Cambiar fondo de la página</h3>
+      <button id="btnRojo">Atardecer</button>
+      <button id="btnVerde">Selva</button>
+      <button id="btnAzul">Océano</button>
+      <button id="btnBlanco">Nieve</button>
+    </section>
+
+    <section>
+      <h3>Notas de viaje</h3>
+      <form id="notaForm">
+        <input type="text" id="notaInput" placeholder="Escribe un recuerdo o consejo">
+        <button type="submit">Agregar</button>
+      </form>
+      <ul id="listaNotas"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="anio">2025</span> Explora el Mundo By Jimmy</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

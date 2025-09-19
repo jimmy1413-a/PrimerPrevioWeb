@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TechBlog</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body data-page="inicio">
+    <header>
+        <nav>
+            <a href="inicio.html" data-page="inicio" class="nav-link">Inicio</a>
+            <a href="Contacto.html" data-page="destinos" class="nav-link">Contacto</a>
+            <a href="Articulos.html" data-page="tips" class="nav-link">Articulos</a>
+            <a href="Acerca.html" data-page="contacto" class="nav-link">Acerca</a>
+            <a href="Recursos.html" data-page="recursos" class="nav-link">Recursos</a>
+        </nav>
+    </header>
+
+
+    <header>
+        <h1>TechBlog</h1>
+        <p>Recursos multimedia académicos sobre tecnología</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Podcast académico</h2>
+            <p>Escucha nuestro episodio sobre las tendencias actuales en inteligencia artificial:</p>
+            <audio controls>
+                <source src="media/podcast.mp3" type="audio/mpeg">
+                Tu navegador no soporta la reproducción de audio.
+                <a href="media/podcast.mp3">Descargar el archivo de audio</a>
+            </audio>
+        </section>
+
+
+        <section>
+            <h2>Video explicativo</h2>
+            <p>Mira nuestro video sobre cómo la tecnología está cambiando la educación:</p>
+            <video controls width="640" height="360">
+                <source src="media/educacion.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+                <a href="media/educacion.mp4">Descargar el archivo de video</a>
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="anio">2025</span> Explora el Mundo By Jimmy</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
